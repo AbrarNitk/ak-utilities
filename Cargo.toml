@@ -2,7 +2,13 @@
 name = "ak-utilities"
 version = "0.1.0"
 edition = "2021"
-
+authors = ["AbrarNitk <abrar.nitk@gmail.com>"]
+description = "Rust utilities to use with the other programs"
+license = "MIT"
+include = ["src/**/*", "Cargo.toml"]
+repository = "https://github.com/AbrarNitk/ak-utilities"
+readme = "README.md"
+keywords = ["str-random", "random", "rand", "rand-lines"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
