@@ -1,4 +1,4 @@
 fn main() {
-    ak_utilities::reverse::reverse(std::path::Path::new("tests/reverse1.txt")).expect("");
+    ak_utilities::fs::reverse(std::path::Path::new("tests/reverse1.txt")).expect("something went wrong");
     println!("Hello, world!");
 }
