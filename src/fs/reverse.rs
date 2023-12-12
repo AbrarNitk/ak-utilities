@@ -1,3 +1,13 @@
+/*
+Requirements:
+
+- Reverse the input lines, words in line, the line itself, chars in the word.
+- Input can be a file from command line or stdin
+- can be very big, can not fit into the memory
+- line can also be a very big, can not fit into the memory
+- output can be written to a file if given from command line or written to the stdout
+*/
+
 // Reverse the file
 // take file name from command line
 // read lines and save the offset of the line
