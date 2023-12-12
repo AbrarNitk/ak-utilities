@@ -1,3 +1,2 @@
-pub mod reverse;
 pub mod rand;
-
+pub mod reverse;

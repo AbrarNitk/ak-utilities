@@ -50,9 +50,7 @@ pub struct Word<H> {
 
 impl<H> Word<H> {
     fn new(r: H) -> Self {
-        Word {
-            len: r
-        }
+        Word { len: r }
     }
 }
 
@@ -69,28 +67,27 @@ impl<H> Word<H> {
 // }
 
 impl<Idx> WordLen for Word<std::ops::Range<Idx>>
-    where
-        Idx: NumericBound + Copy
-        + PartialOrd
-        + rand::distributions::uniform::SampleUniform,
+where
+    Idx: NumericBound + Copy + PartialOrd + rand::distributions::uniform::SampleUniform,
 {
     type Item = Idx;
     fn rand_len(&self) -> Idx {
         use rand::Rng;
         let mut rng = rand::thread_rng();
-        let random_number: Self::Item =
-            rng.gen_range(self.len.start..=self.len.end);
+        let random_number: Self::Item = rng.gen_range(self.len.start..=self.len.end);
         random_number
     }
 }
 
-impl<Idx> WordLen for Word<Idx> where Idx: NumericBound + Copy {
+impl<Idx> WordLen for Word<Idx>
+where
+    Idx: NumericBound + Copy,
+{
     type Item = Idx;
     fn rand_len(&self) -> Self::Item {
         self.len
     }
 }
-
 
 pub fn word() {
     let word = Word::new(5u8..15);
@@ -157,7 +154,6 @@ impl NumericBound for u64 {
         u64::MAX
     }
 }
-
 
 #[cfg(test)]
 mod test {
